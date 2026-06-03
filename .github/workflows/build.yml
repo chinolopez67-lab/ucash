@@ -22,8 +22,12 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Make gradlew executable
-        run: chmod +x mayzter/gradlew
+      - name: Install Gradle and fix wrapper
+        run: |
+          curl -sL https://services.gradle.org/distributions/gradle-8.4-bin.zip -o gradle-8.4.zip
+          unzip -q gradle-8.4.zip
+          ./gradle-8.4/bin/gradle wrapper --gradle-version 8.4 --project-dir mayzter
+          chmod +x mayzter/gradlew
 
       - name: Build Release APK
         run: cd mayzter && ./gradlew assembleRelease
