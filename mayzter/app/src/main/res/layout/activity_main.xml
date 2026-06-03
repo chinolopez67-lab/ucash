@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Logo / Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚗 MAYZTER LITE"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Analizador de viajes Uber · DiDi"
+            android:textSize="13sp"
+            android:textColor="#AAAAAA"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Estado permisos -->
+        <TextView
+            android:id="@+id/tvStatusNotif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="❌ Notificaciones: Desactivado"
+            android:textSize="15sp"
+            android:textColor="#F44336"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvStatusOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="❌ Overlay: Desactivado"
+            android:textSize="15sp"
+            android:textColor="#F44336"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Botones de permisos -->
+        <Button
+            android:id="@+id/btnPermitNotif"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Dar permiso de Notificaciones"
+            android:backgroundTint="#1565C0"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnPermitOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Dar permiso de Overlay"
+            android:backgroundTint="#1565C0"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Configuración -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚙️ Umbrales mínimos para ACEPTAR"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$ mínimo por kilómetro (MXN/km)"
+            android:textSize="13sp"
+            android:textColor="#AAAAAA"
+            android:layout_marginBottom="6dp"/>
+
+        <EditText
+            android:id="@+id/etMinMxnKm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#444444"
+            android:hint="Ej: 8.2"
+            android:textColorHint="#666666"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$ mínimo por hora (MXN/h)"
+            android:textSize="13sp"
+            android:textColor="#AAAAAA"
+            android:layout_marginBottom="6dp"/>
+
+        <EditText
+            android:id="@+id/etMinMxnH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#444444"
+            android:hint="Ej: 150"
+            android:textColorHint="#666666"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="💾 Guardar configuración"
+            android:textSize="16sp"
+            android:backgroundTint="#2E7D32"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="La app analiza automáticamente cada notificación de viaje de Uber y DiDi. Te muestra un overlay y habla en voz alta: ACEPTA o RECHAZA."
+            android:textSize="12sp"
+            android:textColor="#777777"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</ScrollView>
