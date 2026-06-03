@@ -19,9 +19,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Install Gradle and fix wrapper
         run: |
           curl -sL https://services.gradle.org/distributions/gradle-8.4-bin.zip -o gradle-8.4.zip
@@ -31,6 +28,8 @@ jobs:
 
       - name: Build Release APK
         run: cd mayzter && ./gradlew assembleRelease
+        env:
+          ANDROID_HOME: /usr/local/lib/android/sdk
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
